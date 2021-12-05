@@ -1,6 +1,6 @@
 ---
 - name: This sets up an httpd webserver
-  hosts: instance-1
+  hosts: group1
   tasks:
   - name: Install apache packages 
     yum:
