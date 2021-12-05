@@ -1,5 +1,5 @@
 ---
-- hosts: group1
+- hosts: master
   become: yes
   tasks:
   - name: Installs Apache web server
