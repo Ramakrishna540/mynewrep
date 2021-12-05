@@ -1,2 +1,2 @@
-[myserver]
-34.125.59.181 ansible_user=instance-2
+[group1]
+34.125.76.38 ansible_user=instance-1
