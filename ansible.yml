@@ -1,5 +1,5 @@
 ---
 - hosts: group1
   become: yes
-  tasks:
+  service:
     - name: restart apache2
