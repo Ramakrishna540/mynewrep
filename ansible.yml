@@ -1,21 +1,5 @@
-- hosts: group1
+---
+- hosts: all
+  become: yes
   tasks:
-  - name: "httpd software installation"
-    package:
-      name: "httpd"
-      state: present
-
-  handlers:
-  - name: restart service
-    service:
-	  name: "httpd"
-	  state: restarted
-	  enabled: yes
-    register: restart
-  - debug:
-      var: restart.stdout
-
-  - firewalld:
-      port: "7777/tcp"
-      state: enabled
-      permanent: yes
+    - name: restart apache2
