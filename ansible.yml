@@ -1,4 +1,4 @@
-- hosts: webserver
+- hosts: all
   tasks:
   - name: "httpd software installation"
     package:
@@ -24,6 +24,6 @@
       var: restart.stdout
 
   - firewalld:
-      port: "80/tcp"
+      port: "7777/tcp"
       state: enabled
       permanent: yes
