@@ -1,16 +1,8 @@
 ---
 - hosts: group1
-  become: yes
+  become: true
   tasks:
-  - name: Installs Apache web server
-    apt:
-      name: Apache
-      state: present
-      update_cache: true
-    notify:
-    - start Apache
-  handlers:
-  - name: start Apache
-    service:
-      name: Apache
-      state: restarted
+    - name: restarting Apache
+      service:
+        name: apache2
+        state: restarted
