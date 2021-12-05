@@ -1,7 +1,7 @@
 --- 
 - 
   become: true
-  hosts: instance-3
+  hosts: 34.125.59.181
   tasks: 
     - 
       name: "restarting Apache"
