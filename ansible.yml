@@ -1,8 +1,5 @@
 ---
-- hosts: group1
-  become: true
+- hosts: all
+  become: yes
   tasks:
-    - name: restarting Apache
-      service:
-        name: apache2
-        state: restarted
+    - name: restart apache2
