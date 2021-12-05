@@ -1,10 +1,16 @@
---- 
-- 
-  become: true
-  hosts: 34.125.59.181
-  tasks: 
-    - 
-      name: "restarting Apache"
-      service: 
-        name: apache2
-        state: restarted
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Installs Apache web server
+    apt:
+      name: Apache
+      state: present
+      update_cache: true
+    notify:
+    - start Apache
+  handlers:
+  - name: start Apache
+    service:
+      name: Apache
+      state: restarted
