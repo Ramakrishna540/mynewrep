@@ -3,3 +3,4 @@
   become: yes
   tasks:
     - name: restart apache2
+    - state:started
