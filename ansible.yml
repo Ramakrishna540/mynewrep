@@ -5,14 +5,6 @@
       name: "httpd"
       state: present
 
-
-  - name: "Creating web pages"
-    copy:
-      src: "index.html"
-          dest: "/var/www/html/index.html"
-    notify: restart service
-
-
   handlers:
   - name: restart service
     service:
